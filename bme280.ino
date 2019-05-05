@@ -129,7 +129,8 @@ void readPostTempSensor() {
     Serial.println("TIMED OUT");
   }
   else if (result == -2) {
-    Serial.println("INVALID S
+    Serial.println("INVALID SERVER");
+  }
   else if (result == -3) {
     Serial.println("TRUNCATED");
   }
@@ -143,7 +144,7 @@ void readPostTempSensor() {
   }
 
   delay(10000);
-
+  
   client.stop();
 
   Serial.println("Waiting next reading");
